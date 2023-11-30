@@ -217,16 +217,16 @@
   overflow: hidden;
 
   @media (max-width: 780px) {
-    padding: 6rem 0 6rem 3.2rem;
+    padding: 6rem 0;
   }
 }
 
 .schedule-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 8rem;
   margin-bottom: 4rem;
+  padding-left: 3.2rem;
 
   li {
     flex-shrink: 0;
@@ -241,11 +241,11 @@
 
   .table-wrap {
     position: relative;
-    // width: 100%;
-    width: 79rem;
+    max-width: 79rem;
     overflow-x: auto;
+    padding-right: 3.2rem;
+    margin: auto;
     box-sizing: border-box;
-    padding: 0 3.2rem;
   }
 
   @media (max-width: 780px) {

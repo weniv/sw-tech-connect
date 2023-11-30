@@ -239,6 +239,7 @@ button {
     .basic-list li::before {
       content: "";
       display: block;
+      flex-shrink: 0;
       background: var(--ColorSurface);
       width: 0.2em;
       height: 0.2em;
@@ -256,6 +257,7 @@ button {
     .note-list li::before {
       content: "";
       display: block;
+      flex-shrink: 0;
       background: var(--ColorGrayLv3);
       width: 0.2em;
       height: 0.2em;
@@ -295,13 +297,13 @@ button {
     position: relative;
     height: 0;
     padding-top: 80rem;
-    background: url("../assets/banner.png") right 0/84rem auto no-repeat;
+    background: url("../assets/banner.png") calc(100% + 7rem) 0/84rem auto no-repeat;
     text-align: left;
     box-sizing: border-box; }
   @media (max-width: 1190px) {
     .banner .wrap {
       padding-top: calc(800 / 1190 * 100%);
-      background: url("../assets/banner.png") right center/70% auto no-repeat; } }
+      background: url("../assets/banner.png") calc(100% + 7rem) center/65% auto no-repeat; } }
   @media (max-width: 780px) {
     .banner .wrap {
       padding-top: 40rem;
@@ -517,14 +519,14 @@ button {
   overflow: hidden; }
   @media (max-width: 780px) {
     .main-schedule {
-      padding: 6rem 0 6rem 3.2rem; } }
+      padding: 6rem 0; } }
 
 .schedule-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 8rem;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  padding-left: 3.2rem; }
   .schedule-list li {
     flex-shrink: 0; }
   .schedule-list table,
@@ -534,10 +536,11 @@ button {
     border-collapse: collapse; }
   .schedule-list .table-wrap {
     position: relative;
-    width: 79rem;
+    max-width: 79rem;
     overflow-x: auto;
-    box-sizing: border-box;
-    padding: 0 3.2rem; }
+    padding-right: 3.2rem;
+    margin: auto;
+    box-sizing: border-box; }
   @media (max-width: 780px) {
     .schedule-list {
       gap: 6rem; } }

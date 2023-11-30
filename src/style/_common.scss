@@ -93,6 +93,7 @@ button {
     &::before {
       content: "";
       display: block;
+      flex-shrink: 0;
       background: var(--ColorSurface);
       width: 0.2em;
       height: 0.2em;
@@ -115,6 +116,7 @@ button {
     &::before {
       content: "";
       display: block;
+      flex-shrink: 0;
       background: var(--ColorGrayLv3);
       width: 0.2em;
       height: 0.2em;
