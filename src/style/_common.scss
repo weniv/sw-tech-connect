@@ -1,0 +1,117 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: $font-basic;
+  color: var(--ColorSurface);
+  background: var(--ColorBackground);
+  letter-spacing: -0.01em;
+  min-height: 100vh;
+  font-style: normal;
+}
+
+button {
+  letter-spacing: -0.01em;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.sl-ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multi-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.max-width {
+  width: 119rem;
+  margin: 0 auto;
+  max-width: calc(100% - 6rem);
+}
+
+.basic-button {
+  display: block;
+  width: fit-content;
+  padding: 1rem 3.5rem;
+  border-radius: 0.8rem;
+  background: var(--ColorBtnSurface);
+  color: var(--ColorPrimary);
+  text-align: center;
+  font-family: $font-basic;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2rem;
+
+  &.black {
+    background: var(--ColorPrimary);
+    color: var(--ColorBtnSurface);
+  }
+}
+
+.basic-list {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.8rem;
+
+  li {
+    display: flex;
+
+    &::before {
+      content: "";
+      display: block;
+      background: var(--ColorSurface);
+      width: 0.2em;
+      height: 0.2em;
+      border-radius: 50%;
+      margin: 1.3rem 1.15rem 0 1.15rem;
+    }
+  }
+}
+
+.note-list {
+  color: var(--ColorGrayLv3);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+
+  li {
+    display: flex;
+
+    &::before {
+      content: "";
+      display: block;
+      background: var(--ColorGrayLv3);
+      width: 0.2em;
+      height: 0.2em;
+      border-radius: 50%;
+      margin: 1rem 1rem 0 1rem;
+    }
+  }
+}
