@@ -3,6 +3,12 @@
   .wrap {
     padding: 12rem 0;
   }
+
+  @media (max-width: 780px) {
+    .wrap {
+      padding: 6rem 0;
+    }
+  }
 }
 
 .goal-title {
@@ -15,6 +21,12 @@
     width: 100%;
     height: 100%;
   }
+
+  @media (max-width: 780px) {
+    width: 28rem;
+    height: 3.8rem;
+    margin: 0 auto 2.8rem;
+  }
 }
 
 .goal-text {
@@ -23,9 +35,15 @@
   font-weight: 500;
   line-height: 2.8rem;
   text-align: center;
+  margin: 0 auto;
 
   strong {
     font-weight: 700;
+  }
+
+  @media (max-width: 780px) {
+    width: 33rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -36,8 +54,9 @@
   .content-list {
     display: flex;
     justify-content: space-between;
-    gap: 9rem 4rem;
+    gap: 4rem 9rem;
     padding: 12rem 0 10rem;
+    overflow-x: auto;
 
     li {
       width: 30rem;
@@ -66,6 +85,26 @@
       margin-top: 1.2rem;
     }
   }
+
+  @media (max-width: 780px) {
+    background: var(--ColorPrimary);
+    color: var(--ColorBtnSurface);
+
+    .content-list {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5.2rem 0;
+
+      li {
+        flex-shrink: 1;
+      }
+
+      p {
+        color: var(--ColorGrayLv1);
+      }
+    }
+  }
 }
 
 /* 장소 */
@@ -76,15 +115,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 3.2rem;
     padding: 12rem 0;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 2.4rem;
+
+    @media (max-width: 780px) {
+      padding: 6rem 0;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
   }
 }
 
 .place-text {
-  max-width: 39.7rem;
+  flex-shrink: 0;
 }
 
 .place-question {
@@ -95,6 +142,11 @@
 .place-answer {
   font-size: 4rem;
   line-height: 5.6rem;
+
+  @media (max-width: 780px) {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
 }
 
 .place-note {
@@ -103,11 +155,15 @@
 }
 
 .place-img {
-  flex-shrink: 0;
-  width: 60rem;
-  height: 30rem;
+  max-width: 60rem;
+  width: 100%;
+  height: auto;
   border-radius: 3rem;
   box-shadow: var(--EffectShadow);
+
+  @media (max-width: 780px) {
+    border-radius: 1.6rem;
+  }
 }
 
 /* 커뮤니티 */
@@ -121,6 +177,10 @@
     flex-direction: column-reverse;
     gap: 2rem;
     padding: 6.4rem 0;
+
+    @media (max-width: 780px) {
+      padding: 5rem 0;
+    }
   }
 }
 
@@ -137,6 +197,16 @@
     line-height: 3.2rem;
     margin-top: 1.2rem;
   }
+
+  @media (max-width: 780px) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    strong {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
 }
 
 .community-img {
@@ -148,10 +218,11 @@
 .main-schedule {
   background: var(--ColorBtnSurface);
   padding: 12rem 0 10rem;
-  overflow-x: auto;
+  overflow: hidden;
 
-  //   .wrap {
-  //   }
+  @media (max-width: 780px) {
+    padding: 6rem 0 6rem 3.2rem;
+  }
 }
 
 .schedule-list {
@@ -171,6 +242,19 @@
     border: 1px solid var(--ColorGrayLv2);
     border-collapse: collapse;
   }
+
+  .table-wrap {
+    position: relative;
+    // width: 100%;
+    width: 79rem;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding: 0 3.2rem;
+  }
+
+  @media (max-width: 780px) {
+    gap: 6rem;
+  }
 }
 
 .schedule-title {
@@ -184,14 +268,25 @@
   strong {
     font-weight: 700;
   }
+
+  @media (max-width: 780px) {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+    margin: 0 auto 4rem;
+  }
 }
 
 .schedule-table {
+  position: sticky;
+  top: 0;
+  left: 0;
   background: var(--ColorBtnSurface);
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
-  width: 79rem;
+  width: 100%;
+  white-space: nowrap;
 
   thead {
     background: var(--ColorGrayLv1);
@@ -200,6 +295,7 @@
   td,
   th {
     padding: 1rem 1.6rem;
+    box-sizing: border-box;
   }
 
   .table-time {
@@ -231,6 +327,10 @@
 .main-outline {
   background: var(--ColorGrayLv1);
   padding: 12rem 0;
+
+  @media (max-width: 780px) {
+    padding: 5.2rem 0;
+  }
 }
 
 .outline-content {
@@ -267,6 +367,12 @@
     strong {
       font-weight: 700;
     }
+
+    @media (max-width: 780px) {
+      flex-direction: column;
+      gap: 2.4rem;
+      padding: 3.2rem;
+    }
   }
 
   .note-list {
@@ -280,6 +386,12 @@
   gap: 2rem;
 }
 
+.outline-note {
+  address {
+    text-decoration: underline;
+  }
+}
+
 /* 격려 인사 */
 .main-encourage {
   color: var(--ColorBtnSurface);
@@ -290,5 +402,39 @@
     gap: 4rem;
     align-items: center;
     padding: 9.8rem 0;
+
+    @media (max-width: 780px) {
+      padding: 7.6rem 0;
+      gap: 3.2rem;
+    }
+  }
+}
+
+.encourage-title {
+  text-align: center;
+
+  p {
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+  }
+
+  strong {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+  }
+
+  @media (max-width: 780px) {
+    p {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+
+    strong {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
   }
 }

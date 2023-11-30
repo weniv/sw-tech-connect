@@ -4,8 +4,9 @@
   background: var(--ColorBackground);
   z-index: 10;
 
-  & > .wrap {
+  .wrap {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 1.5rem 0;
   }
@@ -19,6 +20,17 @@
       display: block;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .wrap {
+      padding: 1rem 0;
+    }
+
+    h1 {
+      width: 18.2rem;
+      height: 2.4rem;
     }
   }
 }

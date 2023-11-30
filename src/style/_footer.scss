@@ -3,4 +3,13 @@
   background: var(--ColorBtnSurface);
   color: var(--ColorGrayLv3);
   text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
+
+  @media (max-width: 780px) {
+    padding: 4.1rem 0 4rem;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
