@@ -149,6 +149,7 @@ img {
   max-width: 100%; }
 
 :root {
+  color-scheme: light;
   --ColorBtnSurface: #fff;
   --ColorPrimary: #121314;
   --ColorBackground: #1f2123;
