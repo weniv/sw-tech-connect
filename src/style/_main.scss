@@ -87,9 +87,6 @@
   }
 
   @media (max-width: 780px) {
-    background: var(--ColorPrimary);
-    color: var(--ColorBtnSurface);
-
     .content-list {
       flex-direction: column;
       align-items: center;
@@ -98,10 +95,6 @@
 
       li {
         flex-shrink: 1;
-      }
-
-      p {
-        color: var(--ColorGrayLv1);
       }
     }
   }

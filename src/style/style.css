@@ -149,7 +149,7 @@ img {
   max-width: 100%; }
 
 :root {
-  color-scheme: light;
+  color-scheme: only light;
   --ColorBtnSurface: #fff;
   --ColorPrimary: #121314;
   --ColorBackground: #1f2123;
@@ -418,18 +418,13 @@ button {
       line-height: 2.8rem;
       margin-top: 1.2rem; }
   @media (max-width: 780px) {
-    .main-content {
-      background: var(--ColorPrimary);
-      color: var(--ColorBtnSurface); }
-      .main-content .content-list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 5.2rem 0; }
-        .main-content .content-list li {
-          flex-shrink: 1; }
-        .main-content .content-list p {
-          color: var(--ColorGrayLv1); } }
+    .main-content .content-list {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5.2rem 0; }
+      .main-content .content-list li {
+        flex-shrink: 1; } }
 
 /* 장소 */
 .main-place {
